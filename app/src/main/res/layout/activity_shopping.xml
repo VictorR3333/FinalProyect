@@ -7,6 +7,7 @@
     tools:context=".ShoppingActivity">
     <!-- background2 -->
 
+    <!-- background2 -->
     <View
         android:id="@+id/background2"
         android:layout_width="411dp"
@@ -26,12 +27,16 @@
         android:layout_height="610dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/rectangle_3"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="20dp"
-        app:layout_constraintHorizontal_bias="0.549"
-        app:layout_constraintBottom_toTopOf="@+id/low_bar" android:layout_marginBottom="15dp"
-        app:layout_constraintVertical_bias="1.0" tools:visibility="visible"/>
+        app:layout_constraintBottom_toTopOf="@+id/low_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:visibility="visible" />
     <View
         android:id="@+id/low_bar"
         android:layout_width="411dp"
@@ -90,24 +95,113 @@
         android:elevation="4dp"
         app:layout_constraintStart_toEndOf="@+id/todoImg"
         app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@+id/low_bar"/>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="354dp"
-        android:layout_height="605dp"
-        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@+id/background2"
-        app:layout_constraintTop_toTopOf="@+id/background2" app:layout_constraintBottom_toTopOf="@+id/low_bar"
-        app:layout_constraintHorizontal_bias="0.56" app:layout_constraintVertical_bias="0.666">
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="70dp" android:layout_margin="15dp" app:cardCornerRadius="5dp"
-            app:cardElevation="5dp">
-            <SearchView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        </androidx.cardview.widget.CardView>
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:id="@+id/listProducts"/>
-    </LinearLayout>
+
+    <!-- Rectangle 13 -->
+    <SearchView
+        android:layout_width="257dp"
+        android:layout_height="44dp"
+        android:id="@+id/searchView" app:layout_constraintTop_toTopOf="@+id/rectangle_3"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_3"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_3" android:layout_marginTop="28dp"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="70dp" app:srcCompat="@drawable/dairy" android:id="@+id/dairyImageView"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_3"
+        android:layout_marginStart="20dp" app:layout_constraintBottom_toTopOf="@+id/meatImageView"
+        app:layout_constraintVertical_bias="0.91" android:layout_marginBottom="24dp"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="70dp" app:srcCompat="@drawable/drink" android:id="@+id/drinkImageView"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:layout_constraintStart_toEndOf="@+id/dairyImageView" android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/fishImageView" app:layout_constraintVertical_bias="0.972"
+        android:layout_marginBottom="24dp"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="70dp" app:srcCompat="@drawable/fruit" android:id="@+id/fruitImageView"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:layout_constraintStart_toEndOf="@+id/drinkImageView" android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/spiceImageView" app:layout_constraintVertical_bias="1.0"
+        android:layout_marginBottom="24dp"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="70dp" app:srcCompat="@drawable/vegetables" android:id="@+id/vegImageView"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_3"
+        app:layout_constraintStart_toEndOf="@+id/fruitImageView" app:layout_constraintBottom_toTopOf="@+id/breadImageView"
+        app:layout_constraintHorizontal_bias="0.529" app:layout_constraintVertical_bias="1.0"
+        android:layout_marginBottom="24dp"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="70dp" app:srcCompat="@drawable/fish" android:id="@+id/fishImageView"
+        app:layout_constraintBottom_toTopOf="@+id/sauceImageView"
+        android:layout_marginBottom="24dp" app:layout_constraintStart_toEndOf="@+id/meatImageView"
+        app:layout_constraintEnd_toStartOf="@+id/spiceImageView" app:layout_constraintTop_toTopOf="@+id/rectangle_3"
+        android:layout_marginTop="191dp"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="70dp" app:srcCompat="@drawable/meat" android:id="@+id/meatImageView"
+        app:layout_constraintBottom_toTopOf="@+id/alcoholImageView"
+        android:layout_marginBottom="24dp" app:layout_constraintStart_toStartOf="@+id/rectangle_3"
+        android:layout_marginStart="22dp"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="70dp" app:srcCompat="@drawable/spice" android:id="@+id/spiceImageView"
+        app:layout_constraintBottom_toTopOf="@+id/nutsImageView"
+        android:layout_marginBottom="24dp" app:layout_constraintEnd_toStartOf="@+id/breadImageView"
+        android:layout_marginEnd="24dp"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="70dp" app:srcCompat="@drawable/bread" android:id="@+id/breadImageView"
+        app:layout_constraintBottom_toTopOf="@+id/breakfastImageView"
+        android:layout_marginBottom="24dp" app:layout_constraintEnd_toEndOf="@+id/rectangle_3"
+        android:layout_marginEnd="24dp"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="70dp" app:srcCompat="@drawable/alcohol" android:id="@+id/alcoholImageView"
+        app:layout_constraintBottom_toTopOf="@+id/frozenImageView"
+        android:layout_marginBottom="24dp" app:layout_constraintStart_toStartOf="@+id/rectangle_3"
+        android:layout_marginStart="22dp" app:layout_constraintEnd_toStartOf="@+id/sauceImageView"
+        app:layout_constraintHorizontal_bias="0.0"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="70dp" app:srcCompat="@drawable/sauce" android:id="@+id/sauceImageView"
+        app:layout_constraintBottom_toTopOf="@+id/hygieneImageView"
+        android:layout_marginBottom="24dp" app:layout_constraintEnd_toStartOf="@+id/nutsImageView"
+        android:layout_marginEnd="24dp"/>
+
+    <ImageView
+        android:id="@+id/nutsImageView"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="252dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_3"
+        app:layout_constraintEnd_toStartOf="@+id/breakfastImageView"
+        app:srcCompat="@drawable/nuts" />
+
+    <ImageView
+        android:id="@+id/hygieneImageView"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="191dp"
+        android:layout_marginBottom="160dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_3"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_3"
+        app:srcCompat="@drawable/hygiene" />
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="70dp" app:srcCompat="@drawable/breakfast" android:id="@+id/breakfastImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_3"
+        android:layout_marginBottom="255dp" android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_3"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="70dp" app:srcCompat="@drawable/frozen" android:id="@+id/frozenImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_3"
+        android:layout_marginBottom="160dp" app:layout_constraintStart_toStartOf="@+id/rectangle_3"
+        android:layout_marginStart="22dp" app:layout_constraintEnd_toStartOf="@+id/hygieneImageView"
+        app:layout_constraintHorizontal_bias="0.0"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

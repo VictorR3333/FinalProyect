@@ -1,11 +1,11 @@
 package com.example.final_proyect.model;
 
-public class fruit {
+public class product {
 
     String name,image;
-    public fruit(){}
+    public product(){}
 
-    public fruit(String name) {
+    public product(String name) {
         this.name = name;
         //this.image = image;
     }
