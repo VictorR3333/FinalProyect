@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TodoActivity">
+
+    <View
+        android:id="@+id/background2"
+        android:layout_width="411dp"
+        android:layout_height="734dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background2"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.333"/>
+    <View
+        android:id="@+id/rectangle_3"
+        android:layout_width="360dp"
+        android:layout_height="610dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/rectangle_3"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="20dp"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintBottom_toTopOf="@+id/low_bar" android:layout_marginBottom="15dp"/>
+
+    <!-- Light-surface-container -->
+    <View
+        android:id="@+id/low_bar"
+        android:layout_width="411dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+    <!-- Walletw -->
+    <RelativeLayout
+        android:id="@+id/walletImg"
+        android:layout_width="81dp"
+        android:layout_height="73dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/wallet2"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@+id/low_bar"/>
+    <!-- pantryw -->
+    <RelativeLayout
+        android:id="@+id/pantryImg"
+        android:layout_width="77dp"
+        android:layout_height="73dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pantryw"
+        android:elevation="4dp"
+        app:layout_constraintStart_toEndOf="@+id/walletImg" app:layout_constraintTop_toTopOf="@+id/low_bar"/>
+    <!-- shoppingw -->
+    <RelativeLayout
+        android:id="@+id/fridgeImg"
+        android:layout_width="78dp"
+        android:layout_height="74dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/fridgewh"
+        android:elevation="4dp"
+        app:layout_constraintStart_toEndOf="@+id/pantryImg" app:layout_constraintTop_toTopOf="@+id/low_bar"/>
+    <RelativeLayout
+        android:id="@+id/todo"
+        android:layout_width="74dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/todo"
+        android:elevation="4dp"
+        app:layout_constraintStart_toEndOf="@+id/fridgeImg" app:layout_constraintTop_toTopOf="@+id/low_bar"/>
+    <RelativeLayout
+        android:id="@+id/shoppingImg"
+        android:layout_width="78dp"
+        android:layout_height="73dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/shopping2"
+        android:elevation="4dp"
+        app:layout_constraintStart_toEndOf="@+id/todo" app:layout_constraintTop_toTopOf="@+id/low_bar"
+        app:layout_constraintEnd_toEndOf="@+id/low_bar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
